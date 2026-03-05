@@ -331,6 +331,7 @@ export default function DataTable({
           suppressRowClickSelection={true}
           enableCellTextSelection={true}
           ensureDomOrder={true}
+          singleClickEdit={true}
           stopEditingWhenCellsLoseFocus={false}
           undoRedoCellEditing={true}
           undoRedoCellEditingLimit={20}
