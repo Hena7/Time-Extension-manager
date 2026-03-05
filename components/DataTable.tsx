@@ -72,7 +72,7 @@ export default function DataTable({
       {
         field: "generalCase",
         headerName: "General CASES And Their Description",
-        minWidth: 200,
+        minWidth: 250,
         editable: true,
         sortable: true,
         filter: true,
@@ -103,7 +103,7 @@ export default function DataTable({
           {
             field: "contractorBylaw",
             headerName: "Current Agreement of the Contractor",
-            minWidth: 160,
+            minWidth: 250,
             editable: true,
             sortable: true,
             filter: true,
@@ -114,7 +114,7 @@ export default function DataTable({
           {
             field: "fidicBylaw",
             headerName: "FIDIC (Harmonised edition)",
-            minWidth: 150,
+            minWidth: 250,
             editable: true,
             sortable: true,
             filter: true,
@@ -125,7 +125,7 @@ export default function DataTable({
           {
             field: "civilCodeBylaw",
             headerName: "Ethiopian Civil Code (Amharic)",
-            minWidth: 160,
+            minWidth: 250,
             editable: true,
             sortable: true,
             filter: true,
@@ -136,7 +136,7 @@ export default function DataTable({
           {
             field: "proclamationBylaw",
             headerName: "Ethiopian Proclamation (Negarit Gazette)",
-            minWidth: 180,
+            minWidth: 250,
             editable: true,
             sortable: true,
             filter: true,
@@ -147,7 +147,7 @@ export default function DataTable({
           {
             field: "sbdWorkBylaw",
             headerName: "SBD Work (NCB by FPPA)",
-            minWidth: 160,
+            minWidth: 250,
             editable: true,
             sortable: true,
             filter: true,
@@ -165,7 +165,7 @@ export default function DataTable({
           {
             field: "requestSubject",
             headerName: "Subject",
-            minWidth: 130,
+            minWidth: 250,
             editable: true,
             sortable: true,
             filter: true,
@@ -175,7 +175,7 @@ export default function DataTable({
           {
             field: "letterReferenceNumber",
             headerName: "Letter Ref. No",
-            minWidth: 140,
+            minWidth: 250,
             editable: true,
             sortable: true,
             filter: true,
@@ -259,7 +259,7 @@ export default function DataTable({
       {
         field: "totalCumulativeTimeClaimed",
         headerName: "Total Cumulative TIME CLAIM (Time Extension)",
-        width: 170,
+        width: 250,
         editable: false,
         sortable: true,
         filter: true,
@@ -270,7 +270,7 @@ export default function DataTable({
       {
         field: "remark",
         headerName: "REMARK (Reference for Claim)",
-        minWidth: 180,
+        minWidth: 300,
         editable: true,
         sortable: true,
         filter: true,

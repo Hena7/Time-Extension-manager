@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 /**
  * ProjectInfoHeader component.
@@ -6,15 +6,18 @@
  * matching the layout shown in the reference image.
  */
 
-import React from 'react';
-import { ProjectInfo } from '@/types/tableTypes';
+import React from "react";
+import { ProjectInfo } from "@/types/tableTypes";
 
 interface ProjectInfoHeaderProps {
   projectInfo: ProjectInfo;
   onChange: (info: ProjectInfo) => void;
 }
 
-export default function ProjectInfoHeader({ projectInfo, onChange }: ProjectInfoHeaderProps) {
+export default function ProjectInfoHeader({
+  projectInfo,
+  onChange,
+}: ProjectInfoHeaderProps) {
   const handleChange = (field: keyof ProjectInfo, value: string) => {
     onChange({ ...projectInfo, [field]: value });
   };
@@ -22,9 +25,16 @@ export default function ProjectInfoHeader({ projectInfo, onChange }: ProjectInfo
   return (
     <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">
       {/* Title */}
-      <h2 className="text-center text-lg font-bold text-gray-800 mb-6 uppercase tracking-wide">
-        Justifications on Time Extension Request
-      </h2>
+      <div className="flex items-center justify-center">
+        <h2 className="text-center text-lg font-bold text-gray-800 mb-6 uppercase tracking-wide">
+          Justifications on Time Extension Request For{" "}
+          <InfoField
+            label=""
+            value={projectInfo.nameOfProject}
+            onChange={(v) => handleChange("nameOfProject", v)}
+          />
+        </h2>
+      </div>
 
       {/* Two-column layout for project info fields */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-3">
@@ -33,27 +43,27 @@ export default function ProjectInfoHeader({ projectInfo, onChange }: ProjectInfo
           <InfoField
             label="Client"
             value={projectInfo.client}
-            onChange={(v) => handleChange('client', v)}
+            onChange={(v) => handleChange("client", v)}
           />
           <InfoField
             label="Name of Project"
             value={projectInfo.nameOfProject}
-            onChange={(v) => handleChange('nameOfProject', v)}
+            onChange={(v) => handleChange("nameOfProject", v)}
           />
           <InfoField
             label="Project Location"
             value={projectInfo.projectLocation}
-            onChange={(v) => handleChange('projectLocation', v)}
+            onChange={(v) => handleChange("projectLocation", v)}
           />
           <InfoField
             label="Main Contractor"
             value={projectInfo.mainContractor}
-            onChange={(v) => handleChange('mainContractor', v)}
+            onChange={(v) => handleChange("mainContractor", v)}
           />
           <InfoField
             label="Consultant"
             value={projectInfo.consultant}
-            onChange={(v) => handleChange('consultant', v)}
+            onChange={(v) => handleChange("consultant", v)}
           />
         </div>
 
@@ -62,30 +72,32 @@ export default function ProjectInfoHeader({ projectInfo, onChange }: ProjectInfo
           <InfoField
             label="Project Contract Time (in terms of Date)"
             value={projectInfo.projectContractTime}
-            onChange={(v) => handleChange('projectContractTime', v)}
+            onChange={(v) => handleChange("projectContractTime", v)}
           />
           <InfoField
             label="Project Signed Date"
             value={projectInfo.projectSignedDate}
-            onChange={(v) => handleChange('projectSignedDate', v)}
+            onChange={(v) => handleChange("projectSignedDate", v)}
             type="date"
           />
           <InfoField
             label="Actual Project Started Date"
             value={projectInfo.actualProjectStartedDate}
-            onChange={(v) => handleChange('actualProjectStartedDate', v)}
+            onChange={(v) => handleChange("actualProjectStartedDate", v)}
             type="date"
           />
           <InfoField
             label="Project Started Date according to Contract"
             value={projectInfo.projectStartedDateAccordingToContract}
-            onChange={(v) => handleChange('projectStartedDateAccordingToContract', v)}
+            onChange={(v) =>
+              handleChange("projectStartedDateAccordingToContract", v)
+            }
             type="date"
           />
           <InfoField
             label="Site Acceptance Date"
             value={projectInfo.siteAcceptanceDate}
-            onChange={(v) => handleChange('siteAcceptanceDate', v)}
+            onChange={(v) => handleChange("siteAcceptanceDate", v)}
             type="date"
           />
         </div>
@@ -99,7 +111,7 @@ function InfoField({
   label,
   value,
   onChange,
-  type = 'text',
+  type = "text",
 }: {
   label: string;
   value: string;
