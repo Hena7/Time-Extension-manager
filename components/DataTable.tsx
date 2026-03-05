@@ -185,7 +185,7 @@ export default function DataTable({
           {
             field: "letterDate",
             headerName: "Date",
-            width: 130,
+            width: 230,
             editable: true,
             sortable: true,
             filter: true,
@@ -201,7 +201,7 @@ export default function DataTable({
           {
             field: "intervalFrom",
             headerName: "From",
-            width: 130,
+            width: 230,
             editable: true,
             sortable: true,
             filter: true,
@@ -360,8 +360,8 @@ export default function DataTable({
           suppressRowClickSelection={true}
           enableCellTextSelection={true}
           ensureDomOrder={true}
-          singleClickEdit={true}
-          stopEditingWhenCellsLoseFocus={false}
+          singleClickEdit={false}
+          stopEditingWhenCellsLoseFocus={true}
           undoRedoCellEditing={true}
           undoRedoCellEditingLimit={20}
         />

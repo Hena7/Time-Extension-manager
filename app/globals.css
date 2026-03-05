@@ -64,11 +64,38 @@
 
 /* Auto-calculated cell highlights */
 .ag-theme-alpine .bg-blue-50 {
-  background-color: #eff6ff;
+  background-color: #eff6ff !important;
 }
 
+/* "Total Cumulative Time Claim" column colors */
 .ag-theme-alpine .bg-green-50 {
-  background-color: #f0fdf4;
+  background-color: #f0fdf4 !important; /* Row background */
+}
+
+.ag-theme-alpine .bg-green-100 {
+  background-color: #166534 !important; /* Header background (dark green) */
+  color: #ffffff !important;
+}
+
+/* "Bylaw of" header group color */
+.ag-theme-alpine .ag-header-group-bylaw {
+  background-color: #d2572f !important; /* Deep amber/brown header */
+  color: #ffffff !important;
+}
+
+.ag-theme-alpine .ag-header-group-request {
+  background-color: #1e40af !important; /* Custom blue for comparison */
+  color: #ffffff !important;
+}
+
+.ag-theme-alpine .ag-header-group-interval {
+  background-color: #8739c6 !important; /* Custom purple for comparison */
+  color: #ffffff !important;
+}
+
+.ag-theme-alpine .ag-header-group-delay {
+  background-color: #991b1b !important; /* Custom red for comparison */
+  color: #ffffff !important;
 }
 
 /* Pinned column styling */
